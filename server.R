@@ -1,6 +1,6 @@
   library(shiny)
   
-  server(function(input, output) { 
+  server<-function(input, output) { 
     
   nei1 <- read.csv("summaryPM25_1999.csv")
   nei2 <- read.csv("summaryPM25_2002.csv")
@@ -68,4 +68,4 @@
     })
     
     
-  })
+  }

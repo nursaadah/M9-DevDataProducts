@@ -2,12 +2,13 @@ library(shiny)
   
 # Define UI for dataset viewer application
 pageWithSidebar(    
-    
-    headerPanel("Air Pollutant Sample Data"),
+      
+    headerPanel("Air Pollutant"),
     
     sidebarPanel(
-      textInput("fips", "Fips:", "24510"),
-      p("Input 5 digits to search the target city"),      
+      textInput("fips", "Postcode:", "24510"),
+      p("Input 5 digits to search city postcode"),
+      
       
       selectInput("type", "Choose the source type:", choices = c("POINT", "NONPOINT", "ON-ROAD", "NON-ROAD"),"POINT"),
       
@@ -15,7 +16,7 @@ pageWithSidebar(
       p("Click the button to update the results."),
       
       p(""),
-      p('fips: A five-digit number (represented as a string) indicating the U.S. county. Reference: http://www.epa.gov/enviro/html/codes/state.html'), 
+      p('fips: A five-digit number (represented as a string) indicating the U.S. country. Reference: http://www.epa.gov/enviro/html/codes/state.html'), 
       p(""),
       p(""),
       p("type: The type of source (point, non-point, on-road, or non-road)")
